@@ -6,164 +6,168 @@ import java.util.Scanner;
 public class LoopHomeWork {
     public static void main(String[] args) {
 
-        //1.UZDEVUMS
+        //1.UZD
 
         int result = 0;
         while (result < 100) {
             Scanner scanner = new Scanner(System.in);
             int number;
-            System.out.println("1.UZDEVUMS. Ievadi veselu skaitli:");
+            System.out.println("1.UZD. Ievadi veselu skaitli:");
             number = scanner.nextInt();
-            result += number;//result=result+number
+            result += number;
         }
 
-        System.out.println("Gatavs");
-        //////////////////////////////////////////////////////////
+        System.out.println("1.UZD. Gatavs");
 
-        //2.UZDEVUMS
-        Scanner scanner = new Scanner(System.in);
-        int skaitlis;
-        boolean irParaSkaitlis = true;
-        System.out.println("2.UZDEVUMS. Ievadi veselu skaitli!");
-        skaitlis = scanner.nextInt();
-        int i = 2;
-        if (skaitlis <2){
-            irParaSkaitlis=false;
-        }
-        else {
-            while (i <= skaitlis / 2) {
-                if (skaitlis % i == 0) {
-                    irParaSkaitlis = false;
-                    break;
-                }
-                i++;
+        //2.UZD
+
+        int a = 5;
+        boolean vaiIrPirmskaitlis = (a > 1);
+        {
+
+            if (a % 2 == 0 && a != 2) {
+                vaiIrPirmskaitlis = false;
+                System.out.println("Skaitlis " + a + " ir pirmskaitlis " + vaiIrPirmskaitlis);
+
+            } else if (a % 3 == 0 && a != 3) {
+                vaiIrPirmskaitlis = false;
+                System.out.println("Skaitlis " + a + " ir pirmskaitlis " + vaiIrPirmskaitlis);
+
+            } else if (a % 5 == 0 && a != 5) {
+                vaiIrPirmskaitlis = false;
+                System.out.println("Skaitlis " + a + " ir pirmskaitlis " + vaiIrPirmskaitlis);
+            } else {
+                vaiIrPirmskaitlis = true;
+                System.out.println("Skaitlis " + a + " ir pirmskaitlis " + vaiIrPirmskaitlis);
+
             }
-        }
-        if (irParaSkaitlis) {
-            System.out.println(skaitlis + ": ir pirmskaitlis");
-        } else {
-            System.out.println(skaitlis + ": nav pirmskaitlis");
+
         }
 
-        //3.UZDEVUMS
 
-        int[] telefonaNumuri = {28799264, 20093420, 20084212, 26854978, 20023454, 20067898, 20092123, 20086743};
-        String[] krasas = {"zila", "melna", "balta", "dzeltena", "sarkana", "zaļa", "oranža", "violeta"};
-        char[] energoEfektivitatesKlases = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
 
-        //WHILE int
-        int e = 0;
-        System.out.println("3.UZDEVUMS. WHILE METODE:");
-        while (e < telefonaNumuri.length) {
-            System.out.println("Telefona numurs: " + telefonaNumuri[e]);
-            e = e + 1;
+
+        //3.UZD
+
+        int[] numuri = {5345, 54358, 2354, 54345, 21234, 8765364, 3674, 43522};
+        String[] krasas = {"zila", "zaļa","balta", "melna", "dzeltena", "sarkana", "violeta", "oranža"};
+        char[] burti = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
+        int x = 0;
+        System.out.println("3.UZD. WHILE METODE:");
+        while (x < numuri.length) {
+            System.out.println("Numurs: " + numuri[x]);
+            x = x + 1;
         }
 
-        //WHILE String
-        int q = 0;
-        while (q < krasas.length) {
-            System.out.println("Krāsa: " + krasas[q]);
-            q = q + 1;
-        }
 
-        //WHILE char
-        int w = 0;
-        while (w < energoEfektivitatesKlases.length) {
-            System.out.println("Energoefektivitātes klase: " + energoEfektivitatesKlases[w]);
-            w = w + 1;
-        }
-
-        // DO WHILE String
         int y = 0;
-        System.out.println("3.UZDEVUMS. WHILE DO METODE:");
-        do {
+        while (y < krasas.length) {
             System.out.println("Krāsa: " + krasas[y]);
-            y++;
-        } while (y < krasas.length);
+            y = y + 1;
+        }
 
-        // DO WHILE int
+
         int u = 0;
-        do {
-            System.out.println("Telefona numuri: " + telefonaNumuri[u]);
-            u++;
-        } while (u < telefonaNumuri.length);
+        while (u < burti.length) {
+            System.out.println("Burti: " + burti[u]);
+            u = u + 1;
+        }
 
-        // DO WHILE char
+
+        int o = 0;
+        System.out.println("3.UZ. WHILE DO METODE:");
+        do {
+            System.out.println("Krāsa: " + krasas[o]);
+            o++;
+        } while (o < krasas.length);
+
+
+        int p = 0;
+        do {
+            System.out.println("Numuri: " + numuri[p]);
+            p++;
+        } while (p < numuri.length);
+
+
         int s = 0;
         do {
-            System.out.println("Energoefektivitātes klase: " + energoEfektivitatesKlases[s]);
+            System.out.println("Burti: " + burti[s]);
             s++;
-        } while (s < energoEfektivitatesKlases.length);
+        } while (s < burti.length);
 
-        //FOR LOOP int
-        System.out.println("3.UZDEVUMS. FOR LOOP:");
-        for (int j = 0; j < telefonaNumuri.length; j++) {
-            System.out.println("Telefona numuri: " + telefonaNumuri[j]);
+
+        System.out.println("3.UZD. FOR LOOP:");
+        for (int j = 0; j < numuri.length; j++) {
+            System.out.println("Numuri: " + numuri[j]);
         }
 
-        //FOR LOOP String
-        for (int f = 0; f < krasas.length; f++) {
-            System.out.println("Krāsa: " + krasas[f]);
+
+        for (int k = 0; k < krasas.length; k++) {
+            System.out.println("Krāsa: " + krasas[k]);
         }
 
-        //FOR LOOP char
-        for (int m = 0; m < energoEfektivitatesKlases.length; m++) {
-            System.out.println("Energoefektivitātes klase: " + energoEfektivitatesKlases[m]);
+
+        for (int l = 0; l < burti.length; l++) {
+            System.out.println("Burti: " + burti[l]);
         }
 
-        //FOR EACH int
-        System.out.println("3.UZDEVUMS. FOR EACH:");
-        for (int t : telefonaNumuri) {
-            System.out.println("Telefona numuri: " + t);
+
+        System.out.println("3.UZD. FOR EACH:");
+        for (int m : numuri) {
+            System.out.println("Numuri: " + m);
         }
 
-        //FOR EACH String
-        for (String z : krasas) {
-            System.out.println("Krāsa: " + z);
+
+        for (String n : krasas) {
+            System.out.println("Krāsa: " + n);
         }
 
-        //FOR EACH char
-        for (char v : energoEfektivitatesKlases) {
-            System.out.println("Energoefektivitātes klase: " + v);
-        }
-        ///////////////////////////////////
 
-        // 4.UZDEVUMS
-        System.out.println("4.UZDEVUMS");
-        int[] masivsArizmeruSimts = new int[100];
+        for (char b : burti) {
+            System.out.println("Burti: " + b);
+        }
+
+
+        // 4.UZD
+        System.out.println("4.UZD");
+        int[] masivs = new int[100];
         int paraSkaitlis = 2;
-        for (int d = 0; d < 100; d = d + 1) {
-            masivsArizmeruSimts[d] = paraSkaitlis;
+        for (int v = 0; v < 100; v = v + 1) {
+            masivs[v] = paraSkaitlis;
             paraSkaitlis += 2;
         }
-        System.out.println("Pāra skaitļi ir: " + Arrays.toString(masivsArizmeruSimts));
+        System.out.println("Pāra skaitļi ir: " + Arrays.toString(masivs));
 
-        //6.UZDEVUMS
-        System.out.println("6.UZDEVUMS");
-        final int PIN = 1234;
-        int a;
-        System.out.println("Ievadi PIN!");
-        for (int j = 0; j < 3; j++) {
-            a = scanner.nextInt();
-            if (a == PIN) {
+
+
+
+        //6.UZD
+        System.out.println("6.UZD");
+        final int PIN = 3389;
+        int z;
+        System.out.println("Ievadiet PIN!");
+        for (int q = 0; q < 3; q++) {
+            Scanner scanner = new Scanner(System.in);
+            z = scanner.nextInt();
+            if (z == PIN) {
                 System.out.println("PIN ir pieņemts, laipni lūdzam atpakaļ");
                 break;
-            } else if (a != PIN && j<2) {
+            } else if (z != PIN && q<2) {
                 System.out.println("Nepareizs PIN, mēģiniet vēlreiz");
             } else {
-                System.out.println("Atvainojiet, bet jūs esat bloķēt");
+                System.out.println("Atvainojiet, bet jūs esat bloķēts");
             }
         }
 
 
-        ///////////////////////////////////
-        // 5.UZDEVUMS IZVADE
-        System.out.println("5.UZDEVUMS");
-        System.out.println("Faktoriāls = " + aprekinatFaktorialu(8));
+
+        // 5.UZD
+        System.out.println("5.UZD");
+        System.out.println("Faktoriāls = " + faktorials(4));
     }
 
-    // 5.UZDEVUMS
-    public static int aprekinatFaktorialu(int number) {
+    // 5.UZD
+    public static int faktorials(int number) {
         int result = 1;
         for (int i = 1; i <= number; i++) {
             result = result * i;
